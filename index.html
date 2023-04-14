@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and travel website</title>
+     <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!--link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/-->
+
+    <!--link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"-->
+
+    <!-- font awesome cdn link  (https://cdnjs.com/libraries/font-awesome)libray for the fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem; /* Add padding to prevent slider from going beyond the margin */
+  overflow: hidden; /* Add this line to hide the overflowing content */
+}
+  
+.swiper-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+      .swiper-slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .review .review-slider {
+        padding-bottom: 2rem;
+      }
+  
+      .review .box {
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+        border-radius: .5rem;
+      }
+  
+      .review .box img {
+        height: 13rem;
+        width: 13rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+  
+      .review .box h3 {
+        color: #333;
+        font-size: 2.5rem;
+      }
+  
+      .review .box p{
+        color: #666;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+      }
+  
+      .review .box .stars i {
+        color: var(--orange);
+        font-size: 1.7rem;
+      }
+    </style>
+    
+
+    <!--cutom css file line  ()-->
+    <link rel="stylesheet" href="css/stylesheet.css"> 
+   
+
+
+    
+</head>
+
+
+<body>
+   <!-- header section starts-->
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>ravel</a>
+      <nav class="navbar">
+         <a href="#home">home</a>
+         <a href="#book">book</a>
+         <a href="#packages">packages</a>
+         <a href="#services">services</a>
+         <a href="#gallery">gallery</a>
+         <a href="#review">review</a>
+         <a href="#contact">contact</a>
+       
+      </nav>
+      <div class="icons">
+         <i class="fas fa-search" id="search-btn"></i>
+         <i class="fas fa-user" id="login-btn"></i>
+      </div>
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"  ></label>
+      </form>
+    </header>
+   <!-- header section ends-->
+
+   <!--login form container-->
+  <div class="login-form-container">
+   <i class="fas fa-times" id="form-close"></i> 
+   <form action="">
+      <h3>login</h3>
+      <input type="email" class="box" placeholder="Enter your eamil">
+      <input type="password" class="box" placeholder="Enter your password">
+      <input type="submit" value="login now" class="btn">
+      <input type="checkbox" id="remember">
+      <label for="remember">remember me</label>
+      <p>Forgot your password? <a href="#">Click Here</a></p>
+      <p> I don't have an account ?<a href="#">Register now</a></p>
+   </form>
+  </div>
+
+
+<!--home section starts -->
+
+<section class="home" id="home">
+
+   <div class="content">
+      <h3>adventure is worthwhile</h3>
+      <p>discover new places with us, adventure awaits</p>
+      <a href="#" class="btn">discover more</a>
+      
+   </div>
+
+<div class="controls">
+
+   <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+   <!--span class="vid-btn active" data-src="images/vid-5.mp4"></span-->
+   <!---
+   <span class="vid-btn" data-src="images/vid-2.mp4"></span>
+   <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+   <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+   <span class="vid-btn" data-src="images/vid-5.mp4"></span>-->
+</div>
+   <div class="video-container">
+     <!--video src="images/vid-5.mp4" id="video-slider" loop autoplay muted></video-->
+     <video src="images/vid-5.mp4" id="video-slider"  loop autoplay muted></video>
+
+   </div>
+</section>
+
+<!-- home section end -->
+
+<!--book section starts-->
+<section class="book" id="book">
+   <h1 class="heading">
+      <span>b</span>
+      <span>o</span>
+      <span>o</span>
+      <span>k</span>
+      <span class="space"></span>
+      <span>n</span>
+      <span>o</span>
+      <span>w</span>
+   </h1>
+ 
+ <div class="row">
+   
+  <div class="image">
+   <img class="rotate" src="images/Book.jpg" alt="">
+  </div>
+
+    <form action="">
+      <div class="inputBox">
+         <h3>where to</h3>
+         <input type="text" placeholder="placename">
+      </div>
+      <div class="inputBox">
+         <h3>how many</h3>
+         <input type="number" placeholder="number of guests">
+      </div>
+      <div class="inputBox">
+         <h3>arrivals</h3>
+         <input type="date">
+      </div>
+      <div class="inputBox">
+         <h3>leaving</h3>
+         <input type="date" >
+      </div>
+      <input type="submit" class="btn" value="book now">
+    </form>
+ </div>
+</section>
+<!--book section ends-->
+
+
+<!--packages section starts-->
+<section class="packages" id="packages">
+   <h1 class="heading">
+      <span>p</span>
+      <span>a</span>
+      <span>c</span>
+      <span>k</span>
+      <!--span class="space"></span-->
+      <span>a</span>
+      <span>g</span>
+      <span>e</span>
+      <span>s</span>
+   </h1>
+   
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/p-1.jpg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Abuja</h3>
+            <p>"Discover Abuja: A city of vibrant culture and breathtaking nature awaits! 
+               Unleash your inner explorer in Nigeria's captivating capital."</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+
+
+      <div class="box">
+         <img src="images/p-2.jpg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Belgrade </h3>
+            <p>"Unravel the enigmatic allure of Belgrade, where ancient history and vibrant nightlife collide!".</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+
+
+      <div class="box">
+         <img src="images/p-3.jpg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Sydney </h3>
+            <p>"Unleash your adventurous spirit in Sydney,
+                where iconic landmarks and sun-kissed beaches collide for an unforgettable experience!"</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+
+
+      <div class="box">
+         <img src="images/p-4.jpg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Hawaii </h3>
+            <p>"Discover Hawaii's tropical paradise, where enchanting beaches, lush rainforests, and thrilling adventures await your arrival!"</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+
+      <div class="box">
+         <img src="images/p-5.jpg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Tokyo </h3>
+            <p>"Unleash your wanderlust in Tokyo, where ancient traditions collide with cutting-edge innovation for an unforgettable adventure!"</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+
+
+
+      <div class="box">
+         <img src="images/p-6.jpeg" alt="">
+         <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> New york </h3>
+            <p>"Embrace the dazzling spirit of New York City,
+                where dreams come alive amid towering skyscrapers, cultural treasures, and unforgettable moments!
+            </p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+            </div>
+            <div class="price"> $90 <span>$120.00</span> </div>
+            <a href="#book" class="btn">book now</a>
+         </div>      
+      </div>
+   </div>
+</section>
+<!--packages section ends-->
+
+<!--Services section starts here-->
+<section class="services" id="services">
+   <h1 class="heading">
+       <span>s</span>
+       <span>e</span>
+       <span>r</span>
+       <span>v</span>
+       <span>i</span>
+       <span>c</span>
+       <span>e</span>
+       <span>s</span>
+   </h1>
+
+   <div class="box-container">
+       <div class="box">
+           <i class="fas fa-hotel"></i>
+           <h3>affordable hotels</h3>
+           <p>Discover unparalleled comfort at budget-friendly prices, 
+            making your stay both enjoyable and wallet-friendly</p>
+       </div>
+
+       <div class="box">
+           <i class="fas fa-utensils"></i>
+           <h3>food and drinks</h3>
+           <p>Savor exquisite culinary delights and refreshing beverages at our 
+            in-house restaurant and bar, tantalizing your taste buds.</p>
+       </div>
+
+       <div class="box">
+           <i class="fas fa-bullhorn"></i>
+           <h3>safety guide</h3>
+           <p>Rest assured with our comprehensive safety protocols and attentive staff,
+             ensuring a secure and worry-free stay.</p>
+       </div>
+
+       <div class="box">
+           <i class="fas fa-globe-asia"></i>
+           <h3>around the world</h3>
+           <p>Embark on a global journey as you explore our hotel's unique,
+             culturally-inspired décor from around the world.</p>
+       </div>
+
+       <div class="box">
+           <i class="fas fa-plane"></i>
+           <h3>efficient transportation</h3>
+           <p>Experience seamless and swift connections to major attractions 
+            with our prime location and convenient transportation options.</p>
+       </div>
+
+       <div class="box">
+           <i class="fas fa-hiking"></i>
+           <h3>adventures</h3>
+           <p>Unleash your adventurous spirit and immerse yourself in thrilling local activities,
+             curated by our knowledgeable staff.</p>
+       </div>
+   </div>
+</section>
+<!--Services section ends here-->
+
+<!--gallery section starts-->
+
+<section class="gallery" id="gallery">
+
+   <h1 class="heading">
+      <span>g</span>
+      <span>a</span>
+      <span>r</span>
+      <span>l</span>
+      <span>l</span>
+      <span>e</span>
+      <span>r</span>
+      <span>y</span>
+  </h1>
+
+ <div class="box-container">
+
+   <div class="box">
+         <img src="images/g-1.jpg" alt="">
+         <div class="content">
+            <h3>amazing places</h3>
+            <p></p>
+            <a href="#" class="btn">see more</a>
+         </div>
+         </div>
+
+         <div class="box">
+            <img src="images/g-2.jpg" alt="">
+            <div class="content">
+               <h3>amazing places</h3>
+               <p></p>
+               <a href="#" class="btn">see more</a>
+            </div>
+            </div>
+            <div class="box">
+               <img src="images/g-3.jpg" alt="">
+               <div class="content">
+                  <h3>amazing places</h3>
+                  <p></p>
+                  <a href="#" class="btn">see more</a>
+               </div>
+               </div>
+               <div class="box">
+                  <img src="images/p-4.jpg" alt="">
+                  <div class="content">
+                     <h3>amazing places</h3>
+                     <p></p>
+                     <a href="#" class="btn">see more</a>
+                  </div>
+                  </div>
+                  <div class="box">
+                     <img src="images/g-5.jpg" alt="">
+                     <div class="content">
+                        <h3>amazing places</h3>
+                        <p></p>
+                        <a href="#" class="btn">see more</a>
+                     </div>
+                     </div>
+                     <div class="box">
+                        <img src="images/g-6.jpg" alt="">
+                        <div class="content">
+                           <h3>amazing places</h3>
+                           <p></p>
+                           <a href="#" class="btn">see more</a>
+                        </div>
+                        </div>
+                        <div class="box">
+                           <img src="images/g-7.jpg" alt="">
+                           <div class="content">
+                              <h3>amazing places</h3>
+                              <p></p>
+                              <a href="#" class="btn">see more</a>
+                           </div>
+                           </div>
+
+
+                           <div class="box">
+                              <img src="images/p-2.jpg" alt="">
+                              <div class="content">
+                                 <h3>amazing places</h3>
+                                 <p></p>
+                                 <a href="#" class="btn">see more</a>
+                              </div>
+                              </div>
+
+                              <div class="box">
+                                 <img src="images/p-3.jpg" alt="">
+                                 <div class="content">
+                                    <h3>amazing places</h3>
+                                    <p></p>
+                                    <a href="#" class="btn">see more</a>
+                                 </div>
+                                 </div>
+
+   </div>
+</div>
+</section>
+<!--gallery section ends-->
+
+
+
+<!--review sections starts-->
+<section class="review" id="review">
+   <h1 class="heading">
+     <span>r</span>
+     <span>e</span>
+     <span>v</span>
+     <span>i</span>  
+     <span>e</span>
+     <span>w</span>
+     <span>s</span>
+   </h1>
+
+   <div class="swiper-container review-slider">
+
+     <!--div class="swiper-wrapper"-->
+      <div class="swiper-wrapper">
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-1.jpg" alt="">
+           <h3>Tolu.O</h3>
+           <p>
+             "The most unforgettable, thanks to the incredible organization and attention
+             to detail by this amazing travel and tour company!"
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+           </div>
+         </div>
+       </div>
+     
+       <!-- Repeat user 1 in the next 3 swiper-slide -->
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-2.jpg" alt="">
+           <h3>Victor</h3>
+           <p>
+            "A seamless and stress-free travel experience that allowed us to fully 
+            immerse ourselves in the beauty of our destination."
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+           </div>
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-3.jpeg" alt="">
+           <h3>A.O</h3>
+           <p>
+            "The personalized itineraries and friendly tour guides
+            made our adventure truly unique and memorable."  
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+           </div>
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-5.jpg" alt="">
+           <h3>Ana</h3>
+           <p>
+            "The perfect blend of relaxation and adventure, all while feeling 
+            safe and supported by the wonderful team behind the scenes."
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+           </div>
+         </div>
+       </div>
+
+
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-6.jpg" alt="">
+           <h3>Mike</h3>
+           <p>
+            "Their vast knowledge of the best local spots and hidden gems made
+                our trip an authentic and enriching experience." 
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+           </div>
+         </div>
+       </div>
+       <div class="swiper-slide">
+         <div class="box">
+           <img src="images/vic-4.jpg" alt="">
+           <h3>Mark</h3>
+           <p>
+            "From start to finish, the customer service and support were exceptional;
+            I can't imagine traveling any other way now!"
+           </p>
+           <div class="stars">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="far fa-star"></i>
+         </div>
+         </div>
+         </div>
+   
+   </div>
+ </section>
+
+ <!--reveiw section end here-->
+
+
+ <!--contact section starts here-->
+ <section class="contact" id="contact">
+ 
+     <h1 class="heading">
+      <span>c</span>
+      <span>o</span>
+      <span>n</span>
+      <span>t</span>
+      <span>a</span>
+      <span>c</span>
+      <span>t</span>
+   </h1>
+     
+      <div class="row">
+        
+         <div class="image">
+            <img src="images/contact-img.jpg" alt="">
+         </div>
+        
+     <form action="">
+      <div class="inputBox">
+         <input type="text" placeholder="name">
+         <input type="email" placeholder="email">
+      </div>
+      <div class="inputBox">
+          <input type="number" placeholder="number">
+          <input type="text" placeholder="subject">
+         </div>
+
+         <textarea placeholder="message" name="" id="" cols="30" row="10"></textarea>
+         <input type="submit" class="btn" value="send message">
+      </form>
+
+
+      </div>
+
+
+
+ </section>
+
+<!--contact section ends-->
+
+
+<!--brand section start here-->
+<!--js siwper contain works both for review and brand-->
+<section class="brand-container">
+   <div class="swiper-container brand-slider">
+     <div class="swiper-wrapper">
+       <div class="swiper-slide"><img src="images/11.png" alt=""></div>
+       <div class="swiper-slide"><img src="images/12.png" alt=""></div>
+       <div class="swiper-slide"><img src="images/13.png" alt=""></div>
+       <div class="swiper-slide"><img src="images/14.png" alt=""></div>
+       <div class="swiper-slide"><img src="images/15.png" alt=""></div>
+       <div class="swiper-slide"><img src="images/16.png" alt=""></div>
+     </div>
+   </div>
+ </section>
+<!--brand section ends here-->
+
+<!--footer section-->
+
+<section class="footer">
+   <div class="box-container">
+      <div class="box">
+         <h3>about us</h3>
+         <p>
+            your one-stop destination for unforgettable travel experiences.
+             with a passion for exploring the world and a dedication to providing top-notch service,
+              our team strives to make every journey a remarkable adventure.
+         </p>
+      </div>
+
+      <div class="box">
+         <h3>branch locations</h3>
+         <a href="#">serbia</a>
+         <a href="#">Japan</a>
+         <a href="#">Nigeria</a>
+         <a href="#">Germany</a>
+      </div>
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="#">home</a>
+         <a href="#">book</a>
+         <a href="#">packages</a>
+         <a href="#">Services</a>
+         <a href="#">review</a>
+         <a href="#">contact</a>
+      </div>
+
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="#">facebook</a>
+         <a href="#">Instagram</a>
+         <a href="#">twitter</a>
+         <a href="#">linkedin</a>
+      </div>
+
+      
+   </div>
+   <h1 class="credit">created by <span>David Tolulope Osunsakin</span> | all rights reserved</h1>
+</section>
+
+
+
+
+
+
+
+
+<!--script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script-->
+ <!--script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script-->
+
+ <script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const swiper = new Swiper(".swiper-container", {
+       spaceBetween: 20,
+       loop: true,
+       centeredSlides: true,
+       autoplay: {
+         delay: 2500,
+         disableOnInteraction: false,
+       },
+       watchSlidesVisibility: true,
+       breakpoints: {
+         640: {
+           slidesPerView: 1,
+         },
+         768: {
+           slidesPerView: 2,
+         },
+         1024: {
+           slidesPerView: 3,
+         },
+       },
+     });
+   });
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const swiper = new Swiper(".swiper-container", {
+       spaceBetween: 20,
+       loop: true,
+       autoplay: {
+         delay: 2500,
+         disableOnInteraction: false,
+       },
+       breakpoints: {
+         640: {
+           slidesPerView: 1,
+         },
+         768: {
+           slidesPerView: 2,
+         },
+         1024: {
+           slidesPerView: 3,
+         },
+       },
+     });
+   });
+ </script-->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const swiper = new Swiper(".swiper-container", {
+       slidesPerView: 3, // Show three slides at a time
+       spaceBetween: 10, // Add space between slides
+       loop: true, // Enable looping of slides
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+       autoplay: {
+         delay: 3000, // Set the delay between auto transitions (in ms)
+         disableOnInteraction: false, // Continue autoplay after user interaction
+       },
+     });
+   });
+ </script-->
+<!--script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const brandSlider = new Swiper(".brand-slider", {
+       slidesPerView: 3, // Display five slides at a time
+       spaceBetween: 4,
+       loop: true, // Enable infinite looping
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+       autoplay: {
+         delay: 5000,
+         disableOnInteraction: false,
+       },
+     });
+   });
+ </script-->
+ 
+ 
+ 
+ 
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+ <!--custom Js file link -->
+ <script src="js/script.js"></script> 
+</body>
+</html>
