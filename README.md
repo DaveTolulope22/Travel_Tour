@@ -1,6 +1,6 @@
 # Travel and Tour Webpage
 
-This is a responsive Travel and Tour webpage that features a modern design and multiple sections. It is built using HTML, CSS, and vanilla JavaScript. The website is fully responsive and optimized for both desktop and mobile devices.
+This is a responsive Travel and Tour webpage that features a modern design and multiple sections. It is built using HTML, CSS, and  JavaScript. The website is fully responsive and optimized for both desktop and mobile devices.
 
 ## Features
 
